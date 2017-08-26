@@ -1,6 +1,8 @@
-#!/bin/bash
+#!/bin/sh
+# percysalgado@icloud.com
 
-lpstat -p | awk '{print $2}' | while read printer
+for printer in `lpstat -p | awk '{print $2}'`
 do
-echo "Eliminando impresora:" $printer
+echo Deleting $printer
 lpadmin -x $printer
+done
