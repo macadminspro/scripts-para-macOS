@@ -3,6 +3,6 @@
 
 for printer in `lpstat -p | awk '{print $2}'`
 do
-echo Deleting $printer
+echo Eliminando impresora: $printer
 lpadmin -x $printer
 done
