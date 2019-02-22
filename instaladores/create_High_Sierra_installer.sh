@@ -4,6 +4,7 @@ clear
 echo
 echo Script para crear instalador de High Sierra sin necesidad de la App Store...
 echo
+echo ejecute este script con sudo
 echo
 echo Creando carpetas ...
 echo
