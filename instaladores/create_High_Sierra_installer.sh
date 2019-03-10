@@ -6,7 +6,7 @@ echo Script para crear instalador de High Sierra sin necesidad de la App Store..
 echo
 echo ejecute este script con sudo
 echo
-echo Creando carpetas ...
+echo Creando carpetas ... macadmin
 echo
 mkdir ~/Downloads/091-94326/
 cd ~/Downloads/091-94326/
