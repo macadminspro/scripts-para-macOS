@@ -1,0 +1,116 @@
+#!/bin/sh
+Clear
+echo "Script para crear instalador de macOS Mojave..."
+echo
+
+echo
+echo Creando carpetas necesarias
+echo
+
+mkdir ~/Desktop/041-47723/
+cd ~/Desktop/041-47723/
+
+echo
+echo Descargando archivos ...
+echo
+
+if [ "`ls 041-49229.English.dist`" != "041-49229.English.dist" ]; then
+curl https://swdist.apple.com/content/downloads/57/19/041-49229/2djabx33nlymwl0cfgagnk2ytst22y9byp/041-49229.English.dist -o 041-49229.English.dist
+fi;
+
+if [ "`ls 041-47723.English.dist`" != "041-47723.English.dist" ]; then
+curl https://swdist.apple.com/content/downloads/44/42/041-47723/gt7p2zncc41nrdr8ahp0c4udjrf01r43kn/041-47723.English.dist -o 041-47723.English.dist
+fi;
+
+if [ "`ls InstallAssistantAuto.smd`" != "InstallAssistantAuto.smd" ]; then
+curl http://swcdn.apple.com/content/downloads/44/42/041-47723/gt7p2zncc41nrdr8ahp0c4udjrf01r43kn/InstallAssistantAuto.smd -o InstallAssistantAuto.smd
+fi;
+
+if [ "`ls AppleDiagnostics.chunklist`" != "AppleDiagnostics.chunklist" ]; then
+curl http://swcdn.apple.com/content/downloads/44/42/041-47723/gt7p2zncc41nrdr8ahp0c4udjrf01r43kn/AppleDiagnostics.chunklist -o AppleDiagnostics.chunklist
+fi;
+
+if [ "`ls AppleDiagnostics.dmg`" != "AppleDiagnostics.dmg" ]; then
+curl http://swcdn.apple.com/content/downloads/44/42/041-47723/gt7p2zncc41nrdr8ahp0c4udjrf01r43kn/AppleDiagnostics.dmg -o AppleDiagnostics.dmg
+fi;
+
+if [ "`ls OSInstall.mpkg`" != "OSInstall.mpkg" ]; then
+curl http://swcdn.apple.com/content/downloads/44/42/041-47723/gt7p2zncc41nrdr8ahp0c4udjrf01r43kn/OSInstall.mpkg -o OSInstall.mpkg
+fi;
+
+if [ "`ls BaseSystem.chunklist`" != "BaseSystem.chunklist" ]; then
+curl http://swcdn.apple.com/content/downloads/44/42/041-47723/gt7p2zncc41nrdr8ahp0c4udjrf01r43kn/BaseSystem.chunklist -o BaseSystem.chunklist
+fi;
+
+if [ "`ls InstallESDDmg.chunklist`" != "InstallESDDmg.chunklist" ]; then
+curl http://swcdn.apple.com/content/downloads/44/42/041-47723/gt7p2zncc41nrdr8ahp0c4udjrf01r43kn/InstallESDDmg.chunklist  -o InstallESDDmg.chunklist
+fi;
+
+if [ "`ls BaseSystem.dmg`" != "BaseSystem.dmg" ]; then
+curl http://swcdn.apple.com/content/downloads/44/42/041-47723/gt7p2zncc41nrdr8ahp0c4udjrf01r43kn/BaseSystem.dmg -o BaseSystem.dmg
+fi;
+
+if [ "`ls RecoveryHDMetaDmg.pkm`" != "RecoveryHDMetaDmg.pkm" ]; then
+curl https://swdist.apple.com/content/downloads/44/42/041-47723/gt7p2zncc41nrdr8ahp0c4udjrf01r43kn/RecoveryHDMetaDmg.pkm -o RecoveryHDMetaDmg.pkm
+fi;
+
+if [ "`ls RecoveryHDMetaDmg.pkg`" != "RecoveryHDMetaDmg.pkg" ]; then
+curl http://swcdn.apple.com/content/downloads/44/42/041-47723/gt7p2zncc41nrdr8ahp0c4udjrf01r43kn/RecoveryHDMetaDmg.pkg -o RecoveryHDMetaDmg.pkg
+fi;
+
+if [ "`ls InstallAssistantAuto.pkm`" != "InstallAssistantAuto.pkm" ]; then
+curl https://swdist.apple.com/content/downloads/44/42/041-47723/gt7p2zncc41nrdr8ahp0c4udjrf01r43kn/InstallAssistantAuto.pkm -o InstallAssistantAuto.pkm
+fi;
+
+if [ "`ls InstallAssistantAuto.pkg`" != "InstallAssistantAuto.pkg" ]; then
+curl http://swcdn.apple.com/content/downloads/44/42/041-47723/gt7p2zncc41nrdr8ahp0c4udjrf01r43kn/InstallAssistantAuto.pkg -o InstallAssistantAuto.pkg
+fi;
+
+if [ "`ls InstallInfo.plist`" != "InstallInfo.plist" ]; then
+curl http://swcdn.apple.com/content/downloads/44/42/041-47723/gt7p2zncc41nrdr8ahp0c4udjrf01r43kn/InstallInfo.plist -o InstallInfo.plist
+fi;
+
+if [ "`ls MajorOSInfo.pkm`" != "MajorOSInfo.pkm" ]; then
+curl https://swdist.apple.com/content/downloads/44/42/041-47723/gt7p2zncc41nrdr8ahp0c4udjrf01r43kn/MajorOSInfo.pkm -o MajorOSInfo.pkm
+fi;
+
+if [ "`ls MajorOSInfo.pkg`" != "MajorOSInfo.pkg" ]; then
+curl http://swcdn.apple.com/content/downloads/44/42/041-47723/gt7p2zncc41nrdr8ahp0c4udjrf01r43kn/MajorOSInfo.pkg -o MajorOSInfo.pkg
+fi;
+
+if [ "`ls InstallESDDmg.pkm`" != "InstallESDDmg.pkm" ]; then
+curl https://swdist.apple.com/content/downloads/44/42/041-47723/gt7p2zncc41nrdr8ahp0c4udjrf01r43kn/InstallESDDmg.pkm -o InstallESDDmg.pkm
+fi;
+
+if [ "`ls InstallESDDmg.pkg`" != "InstallESDDmg.pkg" ]; then
+curl http://swcdn.apple.com/content/downloads/44/42/041-47723/gt7p2zncc41nrdr8ahp0c4udjrf01r43kn/InstallESDDmg.pkg -o InstallESDDmg.pkg
+fi;
+
+
+
+echo
+echo Construyendo paquete de instalación...
+echo
+
+
+cd ..
+productbuild --distribution ./041-47723/041-49229.English.dist --package-path ./041-47723/ installer.pkg
+
+sudo /usr/sbin/installer -pkg installer.pkg -target /
+
+echo
+echo Copiando archivos
+echo
+
+sudo cp ./041-47723/InstallESDDmg.pkg /Applications/Install\ macOS\ Mojave.app/Contents/SharedSupport/InstallESD.dmg
+sudo cp ./041-47723/AppleDiagnostics.dmg /Applications/Install\ macOS\ Mojave.app/Contents/SharedSupport/
+sudo cp ./041-47723/AppleDiagnostics.chunklist /Applications/Install\ macOS\ Mojave.app/Contents/SharedSupport/
+sudo cp ./041-47723/BaseSystem.dmg /Applications/Install\ macOS\ Mojave.app/Contents/SharedSupport/
+sudo cp ./041-47723/BaseSystem.chunklist /Applications/Install\ macOS\ Mojave.app/Contents/SharedSupport/
+
+echo
+echo Instalador creado ...
+echo
+
+
+
