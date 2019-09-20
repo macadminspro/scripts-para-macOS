@@ -36,5 +36,5 @@ particion=$(system_profiler SPUSBDataType | grep -oE '/Volumes/.*$')
 ejecutable=$(find / -name createinstallmedia 2>&1 | grep -v "find:")
 sudo "$ejecutable" --volume $particion --nointeraction --downloadassets
 echo
-nohup osascript -e 'tell app "System Events" to display dialog "SE COMPLETO LA CREACION DEL BOOTEABLE!" buttons {"OK"} default button 1' &
+osascript -e 'tell app "System Events" to display dialog "SE COMPLETO LA CREACION DEL BOOTEABLE!" buttons {"OK"} default button 1'
 exit 
