@@ -23,6 +23,7 @@ echo "=                SI MUESTRA ERROR O SE CIERRA, EJECUTE DE NUEVO ;)        
 echo "=                                                                                 ="
 echo "==================================================================================="
 echo
+echo
 read
 # Formatear el USB
 
