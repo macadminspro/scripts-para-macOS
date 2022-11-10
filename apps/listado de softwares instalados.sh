@@ -12,7 +12,7 @@ for i in /Applications/*app
 	app=$(/usr/libexec/plistbuddy -c Print:CFBundleName: "$i"/Contents/info.plist)
     	version=$(/usr/libexec/plistbuddy -c Print:CFBundleShortVersionString: "$i"/Contents/info.plist)
     	vendor=$(/usr/libexec/plistbuddy -c Print:NSHumanReadableCopyright: "$i"/Contents/info.plist)
-    	echo "$app","$version","$vendor" >> ~/Desktop/listado.csv
+    	echo "$app","$version","$vendor" >> ~/Desktop/listado\ apps.csv
     done
     
 for i in /Applications/*/*app
@@ -20,6 +20,14 @@ for i in /Applications/*/*app
 	app=$(/usr/libexec/plistbuddy -c Print:CFBundleName: "$i"/Contents/info.plist)
     	version=$(/usr/libexec/plistbuddy -c Print:CFBundleShortVersionString: "$i"/Contents/info.plist)
     	vendor=$(/usr/libexec/plistbuddy -c Print:NSHumanReadableCopyright: "$i"/Contents/info.plist)
-    	echo "$app","$version","$vendor" >> ~/Desktop/listado.csv
+    	echo "$app","$version","$vendor" >> ~/Desktop/listado\ apps.csv
+    done
+    
+for i in /Applications/*/*/*app
+	do
+	app=$(/usr/libexec/plistbuddy -c Print:CFBundleName: "$i"/Contents/info.plist)
+    	version=$(/usr/libexec/plistbuddy -c Print:CFBundleShortVersionString: "$i"/Contents/info.plist)
+    	vendor=$(/usr/libexec/plistbuddy -c Print:NSHumanReadableCopyright: "$i"/Contents/info.plist)
+    	echo "$app","$version","$vendor" >> ~/Desktop/listado\ apps.csv
     done
     
